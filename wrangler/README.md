@@ -15,7 +15,7 @@ Authorize wrangler from within docker container, this is not needed if CLOUDFLAR
 Deploy from within docker container for wrangler
 
 ```
-wrangler pages deploy ./public --project-name dronasys
+wrangler pages deploy ./public --project-name [PROJECT-name]
 ```
 
 ## Example usage
