@@ -21,7 +21,7 @@ wrangler pages deploy ./public --project-name [PROJECT-name]
 ## Example usage
 
 ```
-## deploy dronasys website via docker
+## deploy  website via docker
 #npx wrangler pages deploy ./src/public --project-name [PROJECT-name]
 docker run --rm -it --name ${APP_NAME} -e CLOUDFLARE_API_TOKEN=$(CLOUDFLARE_API_TOKEN) -v ./src/:/app -p 8976:8976 ${WRANGLER_IMAGE}  pages deploy ./public --project-name [PROJECT-name]
 ```
