@@ -7,6 +7,8 @@ RUN apk update && apk add --no-cache git make bash
 # Install reflex
 RUN go install github.com/cespare/reflex@latest
 
+# Copy tooling scripts, to add autocomplete for make and other functions
+COPY ./tooling.sh /etc/bash/tooling.sh
 
 WORKDIR /app
 
