@@ -1,0 +1,18 @@
+
+
+### to be Added to /etc/bash.rc or home/.bashrc by docker build
+
+_make_target_autocomplete() {
+    # Check if a Makefile exists in the current directory
+    if [[ -f "Makefile" || -f "makefile" ]]; then
+        # Parse the Makefile to extract target names, ignoring hidden or internal rules
+        local targets=$(grep -oE '^[a-zA-Z0-9_-]+:' [Mm]akefile 2>/dev/null | sed 's/://')
+        COMPREPLY=( $(compgen -W "${targets}" -- "${COMP_WORDS[COMP_CWORD]}") )
+    fi
+}
+
+# Bind the autocomplete function to the 'make' command
+complete -F _make_target_autocomplete make
+
+source /opt/ros/lyrical/setup.bash
+source /root/nav2_ws/install/setup.bash
