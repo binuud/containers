@@ -1,0 +1,8 @@
+# useful aliases to start dev containers
+# source this file form your .zshrc or .bashrc
+# they mount the current working directoty into dev containers
+
+alias container-alpine="docker run --rm -it -v .:/data -w /data  alpine sh"
+alias container-busybox="docker run --rm -it -v .:/data -w /data busybox sh"
+alias container-golang="docker run --rm -it -v .:/app -w /app dronasys-com/golang:1.27.1"
+alias container-aws-cli="docker run --rm -it -v ~/.aws:/root/.aws --entrypoint bash amazon/aws-cli"
