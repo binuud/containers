@@ -1,4 +1,4 @@
-FROM golang:1.27.1-alpine
+FROM golang:1.27.2-alpine
 
 # Install necessary system dependencies for protoc
 RUN apk update && apk add --no-cache git make bash curl \
