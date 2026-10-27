@@ -1,0 +1,19 @@
+ {
+   "providers": {
+     "mlx": {
+       "baseUrl": "http://host.docker.internal:11234/v1",
+       "api": "openai-completions",
+       "apiKey": "mlx-serve",
+       "compat": {
+         "supportsDeveloperRole": false,
+         "supportsReasoningEffort": true,
+         "maxTokensField": "max_tokens"
+       },
+       "models": [
+         {"id": "mlx-serve", "name": "mlx-mlx-serve", "input": ["text"],
+          "contextWindow": 32768, "maxTokens": 8192, "reasoning": true,
+          "thinkingLevelMap": {"off": "none"}}
+       ]
+     }
+   }
+ }
