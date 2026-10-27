@@ -3,6 +3,11 @@
 Start the PI coding agent in a docker container, with model hosted on your local machine. 
 
 Modify the models.json as per your convenience. And mount the same when starting the docker contianer
+
+For ollama use the port 11434 and for docker model runner use port 12434
+
+
+
 ```
 {
   "providers": {
